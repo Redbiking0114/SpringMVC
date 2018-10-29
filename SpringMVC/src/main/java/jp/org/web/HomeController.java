@@ -36,11 +36,11 @@ public class HomeController {
 		Date date = new Date();
 		// 日付／時刻をlong形式に変換
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+		// long形式に変換した時刻をformattedDateに代入
 		String formattedDate = dateFormat.format(date);
-		
+		// view側に渡す時刻オブジェクトをmodelにセット
 		model.addAttribute("serverTime", formattedDate );
-		
+		// view名を返却する
 		return "home";
 	}
 	

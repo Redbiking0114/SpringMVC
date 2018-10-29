@@ -9,19 +9,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Handles requests for the application home page.
+ * ログイン画面コントローラの作成
  */
 @Controller
 public class LoginController {
 	
+	// ロガーを取得するインスタンスの作成
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
 	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	 * ホーム画面に返す値を設定する
+	 */ 
 	@RequestMapping(value = "/login")
+	// 
 	public String home(Locale locale, Model model) {
-		
+		// URLが"/login"の場合、login.jspを表示する
 		return "login";
 	}	
 }
